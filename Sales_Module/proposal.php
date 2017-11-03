@@ -86,7 +86,7 @@
 </head>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3" id="sidebar">
+        <div class="col-2" id="sidebar">
             <div id="identity">
                 <img src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png">
                 <p> ISMAEL LANGIT <br> Admin </p>
