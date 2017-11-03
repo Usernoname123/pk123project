@@ -81,41 +81,79 @@
               font-size: 12px;
               border: none;
           }
+		  .date-contract-sales {
+				
+		  }
+		  
+		  
+
       </style>
       
 </head>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-2" id="sidebar">
+        <div class="col-3" id="sidebar">
             <div id="identity">
                 <img src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png">
                 <p> ISMAEL LANGIT <br> Admin </p>
             </div>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="sales_proposals.html"> <img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png"> Proposals</a>
+              <a class="nav-link" href="#"> <img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png"> Proposals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sales_contracts.html"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/11223-200.png"> Contracts</a>
+              <a class="nav-link" href="#"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/11223-200.png"> Contracts</a>
             <li class="nav-item active">
-              <a class="nav-link" href="sales_history.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/1024px-User_font_awesome.svg.png"> History</a>
+              <a class="nav-link" href="#"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/1024px-User_font_awesome.svg.png"> History</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sales_establishments.html"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/26202-200.png" width="15"> Establishments </a>
+              <a class="nav-link" href="#"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/26202-200.png" width="15"> Establishments </a>
             </li>
             <li class="nav-item"> 
-              <a class="nav-link" href="sales_engager.html"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/194977-200.png" width=15> Engager <!--<span class="notif"> 1 </span>--></a>
+              <a class="nav-link" href="#"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/194977-200.png" width=15> Engager <!--<span class="notif"> 1 </span>--></a>
             </li>
           </ul>
         </div>
         </div>
-</div>
-<div class = "container-fluid">
-      <div class = "row">
-          <div class = "col-7">
-              
-          </div>
-      </div>  
-</div>
+     </div>
+    
+<div class="col-9" style="margin-left:25%; margin-top: 10px;">
+    <div class="continer-fluid" id="search">
+        <div class="row">
+            <div class="col">
+                <div class="input-group">
+                    <a href="#"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" width="30px"/></a>
+                    <input type="text" class="form-control" placeholder="Search for something...">
+                    <a href="#" style="margin-right: 20px;"> <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/194977-200.png" width="15px" style="margin-top: 3px; "/></a>
+                    <a href="#"> <img src="http://www.free-icons-download.net/images/logout-button-icon-76344.png" width="15px;"/> Logout </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h1>HISTORY</h1>
+    <h2>Sales Department</h2>
 
-</html>
+    <p>Filter by:</p>
+    
+    <div>
+        <label for="numresults">No. of Results</label>
+        <select class="form-control col-md-2" id="numresults">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+    </div>
+	
+	<div class="date-contract-sales">
+		<label for="contractDate" class="col-2 col-form-label">Date</label>
+		<div class="col-3">
+			<input class="form-control col-md-3" type="date" value="2011-08-19" id="example-date-input">
+		</div>
+	</div>
+      
+    
+</div >
+         
+     
