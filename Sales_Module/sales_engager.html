@@ -19,30 +19,17 @@
           #sidebar {
               background-color: rgb(255,232,140);
               height: 100vh; 
+              position: fixed;
           }
           #identity {
               margin-top: 10px;
               font-size: 15px;
               text-align: center;
           }
-          
           #identity img {
               width: 100px;
           }
           
-          #search {
-              border-bottom: #d9d9d9 3px solid;
-          }
-          
-          #search a {
-              color: black;
-              font-size: 12;
-          }
-          
-          #search a:hover {
-              color: #e69138;
-              text-decoration: none;
-          }
           .nav-link {
               color: black;
               font-family: roboto;
@@ -80,10 +67,28 @@
           }
           .form-control {
               font-size: 12px;
-              border: none;
+          }
+          #pagination {
+            text-align: center;
+          }
+          .btn-circle {
+            border-radius: 100%;
+          }
+          .input-group {
+            margin-bottom: 10px;
+          }
+
+          #pagination a {
+            margin: 0 10px;
+            text-align: center;
+          }
+
+          #content {
+            position: absolute;
+            right: 0;
+            margin-bottom: 10px;
           }
       </style>
-      
 </head>
 <div class="container-fluid">
     <div class="row">
@@ -94,7 +99,7 @@
             </div>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="sales_proposals.html"> <i class="fa fa-paperclip"> </i> Proposals</a>
+              <a class="nav-link" href="sales_proposals.html"> <i class="fa fa-thumb-tack"> </i> Proposals</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sales_contracts.html"> <i class="fa fa-handshake-o"> </i> Contracts </a>
@@ -109,13 +114,484 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-10">
-                <div class="continer-fluid" id="search">
-                    <div class="row">
-                        <div class="col">
-                            
-                        </div>
-                    </div>
-            </div>
+      <div class="col-md-10" id="content">
+      <div class="continer">
+        <div class="row">
+          <div class="col">
+            <h1 class="display-4"> Engagers 
+             <button type="button" class="btn btn-circle btn-primary" data-toggle="modal" data-target="#add"> <i class="fa fa-plus"> </i> </button> 
+            </h1>
+          </div>
         </div>
-     </div>
+        <div class="row">
+          <div class="col">
+          <form>
+            <div class="input-group">
+              <span class="input-group-addon"> <i class="fa fa-search"> </i> </span>
+              <input type="text" placeholder="Search..." class="form-control" />
+              <input type="submit" class="btn btn-secondary" value="Search">
+            </div>
+          </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p> Showing 7 of 7</p>
+          </div>
+          <div class="col" id="pagination">
+            <a href="#"> <i class="fa fa-angle-double-left"> </i> </a>
+            <a href="#"> 1 </a>
+            <a href="#"> <i class="fa fa-angle-double-right"> </i> </a>
+          </div>
+          <div class="col text-right" >
+            <div class="btn-group">
+              <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 10 Per Page </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">20 Per Page</a>
+                <a class="dropdown-item" href="#">50 Per Page</a>
+                <a class="dropdown-item" href="#">100 Per Page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th class="text-center"> Name </th>
+                  <th class="text-center"> Contact No. </th>
+                  <th class="text-center"> Email Address </th>
+                  <th class="text-center"> View Details </th>
+                  <th class="text-center"> Edit </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> BASCO, ALLEN </td>
+                  <td> 09913457278 </td>
+                  <td> 2156164@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editAllen" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+                <tr>
+                  <td> MAURI, DIANE KAYE </td>
+                  <td> 09451384591 </td>
+                  <td> 2151305@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editDiane" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+                <tr>
+                  <td> LANGIT, ISMAEL </td>
+                  <td> 09458135782 </td>
+                  <td> 2155957@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editIsmael" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+                <tr>
+                  <td> MIRANDA, JANINA-VALERIE </td>
+                  <td> 09489123482 </td>
+                  <td> 2151445@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editJanina" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+                <tr>
+                  <td> GERALDEZ, MAUREEN </td>
+                  <td> 09545812811 </td>
+                  <td> 2152127@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editMaureen" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+                <tr>
+                  <td> HALOS, NERI MAE </td>
+                  <td> 09489123482 </td>
+                  <td> 2152155@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editNeri" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+                <tr>
+                  <td> MORILLO, REY MARK </td>
+                  <td> 09497451254 </td>
+                  <td> 2158395@slu.edu.ph </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editYay" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a href="#" class="btn btn-secondary btn-sm"> NEXT </a>
+          </div>
+          <div class="col" id="pagination">
+            <a href="#"> 1 </a>
+          </div>
+          <div class="col text-right" >
+            <a href="#" class="btn btn-secondary btn-sm"> BACK </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- ADD MODAL -->
+  <div class="modal fade" id="add" tab-index="-1" role="dialog" aria-labelledby="addLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addLabel">Add New Engager</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-users"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name" />
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-home"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Address" />
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Contact Person" />
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." />
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT MODAL -->
+  <div class="modal fade" id="editAllen" tab-index="-1" role="dialog" aria-labelledby="editAllenLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editAllenLabel">Edit Engager: BASCO, ALLEN</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="BASCO, ALLEN"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-home"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Address" value="After Basketball Court, Camp 8, Baguio City"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Contact Person" value="BASCO, ALLEN"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2156164@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW MODAL -->
+  <div class="modal fade" id="viewAllen" tab-index="-1" role="dialog" aria-labelledby="viewAllenLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewAllenLabel">Engager: BASCO, ALLEN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> <b> Address: </b> After Basketball Court, Camp 8, Baguio City </li>
+              <li class="list-group-item"> <b> Contact Person: </b> BASCO, ALLEN </li>
+              <li class="list-group-item"> <b> Contact No.: </b> 09913457278 </li>
+              <li class="list-group-item">  <b> Email Address: </b> 2156164@slu.edu.ph  </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+
+  <!-- OTHER MODALS -->
+  <!-- EDIT DIANE -->
+  <div class="modal fade" id="editDiane" tab-index="-1" role="dialog" aria-labelledby="editDianeLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editDianeLabel">Edit Engager: MAURI, DIANE KAYE</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="MAURI, DIANE KAYE"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2151305@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT ISMAEL -->
+  <div class="modal fade" id="editIsmael" tab-index="-1" role="dialog" aria-labelledby="editIsmaelLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addLabel">Edit Engager: LANGIT, ISMAEL</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="LANGIT, ISMAEL"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2155957@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT JANINA -->
+  <div class="modal fade" id="editJanina" tab-index="-1" role="dialog" aria-labelledby="editJaninaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editJaninaLabel">Edit Engager: MIRANDA, JANINA-VALERIE</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="MIRANDA, JANINA-VALERIE"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2151445@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT MAUREEN -->
+  <div class="modal fade" id="editMaureen" tab-index="-1" role="dialog" aria-labelledby="editMaureenLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editMaureenLabel">Edit Engager: GERALDEZ, MAUREEN </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="GERALDEZ, MAUREEN"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2152127@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT NERI -->
+  <div class="modal fade" id="editNeri" tab-index="-1" role="dialog" aria-labelledby="editNeriLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editNeriLabel">Edit Engager: HALOS, NERI MAE </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="HALOS, NERI MAE"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2152155@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT YAY -->
+  <div class="modal fade" id="editYay" tab-index="-1" role="dialog" aria-labelledby="editYayLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editYayLabel">Edit Engager: MORILLO, REY MARK</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="MORILLO, REY MARK"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2158395@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW ALLEN -->
+  <div class="modal fade" id="editAllen" tab-index="-1" role="dialog" aria-labelledby="editAllenLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editAllenLabel">Engager: BASCO, ALLEN</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+            <input type="text" class="form-control" placeholder="Engager Name"  value="BASCO, ALLEN"/>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> +63 </span>
+            <input type="number" class="form-control" placeholder="Contact No." value="09913457278"/>
+            <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span>
+            <input type="email" class="form-control" placeholder="Email Address" value="2156164@slu.edu.ph"/>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
