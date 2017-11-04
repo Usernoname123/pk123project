@@ -14,3 +14,45 @@
 .pageTitle{
 	font-size: 20px;
 }
+
+.btn-circle {
+	font-size: 20px;
+}
+
+.btn-circle.btn-primary {
+	border-color: #ff515a;
+	color: #ff515a;
+	transition: 0.3s;
+}
+
+.btn-circle.btn-primary:hover {
+	border-color: red;
+	color: red;
+	transition: 0.3s;
+}
+
+.btn-icon {
+	border: none;
+	margin: none;
+	padding: none;
+	font-size: 20px;
+}
+
+
+a#title {
+	margin-left: 10px;
+	font-size: 30px;
+}
+
+.input-group{
+	margin-bottom: 10px;
+}
+
+.form-control {
+	font-family: roboto;
+	font-size: 12px;
+}
+
+table#modal {
+	font-size: 12px;
+}
