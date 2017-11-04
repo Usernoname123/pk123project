@@ -1,2 +1,5 @@
 Nagloloko yung modal dun sa sales_engager.html di ko alam kung bakit :(
 yung view nalang yung modal dun. :)
+
+Ay tapos yung dun sa sales_engager_add.html tas sales_engager_edit.html..
+di ko alam kung pano yung append :) patulong salamuuuuuch :D

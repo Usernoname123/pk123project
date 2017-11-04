@@ -15,27 +15,11 @@
 	font-size: 20px;
 }
 
-.btn-circle {
-	font-size: 20px;
-}
-
-.btn-circle.btn-primary {
-	border-color: #ff515a;
-	color: #ff515a;
-	transition: 0.3s;
-}
-
-.btn-circle.btn-primary:hover {
-	border-color: red;
-	color: red;
-	transition: 0.3s;
-}
-
 .btn-icon {
 	border: none;
 	margin: none;
 	padding: none;
-	font-size: 20px;
+	font-size: 17px;
 }
 
 
