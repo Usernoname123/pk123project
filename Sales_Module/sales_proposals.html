@@ -14,6 +14,7 @@
       <!--FONTS-->
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
       <!--Dagdag po to sa CSS -->
       <style>
           #sidebar {
@@ -69,6 +70,26 @@
               font-size: 12px;
               border: none;
           }
+          #pagination {
+            text-align: center;
+          }
+          .btn-circle {
+            border-radius: 100%;
+          }
+          .input-group {
+            margin-bottom: 10px;
+          }
+
+          #pagination a {
+            margin: 0 10px;
+            text-align: center;
+          }
+
+          #content {
+            position: absolute;
+            right: 0;
+            margin-bottom: 10px;
+          }
       </style>
       
 </head>
@@ -97,31 +118,96 @@
           </ul>
         </div>
         <div class="col-md-10">
-                <div class="continer-fluid" id="search">
-                    <div class="row">
-                        <div class="table">
-                            <table class = "table">
-								<thead>
-								  <tr>
-									<th>No.</th>
-									<th>Lastname</th>
-									<th>Age</th>
-									<th>City</th>
-									<th>Country</th>
-								  </tr>
-								</thead>
-								<tbody>
-								  <tr>
-									<td>Anna</td>
-									<td>Pitt</td>
-									<td>35</td>
-									<td>New York</td>
-									<td>USA</td>
-								  </tr>
-								</tbody>
-							</table>
-                        </div>
-                    </div>
+        <div class="row">
+          <div class="col">
+            <h1 class="display-4"> Proposals 
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+          <form>
+            <div class="input-group">
+              <span class="input-group-addon"> <i class="fa fa-search"> </i> </span>
+              <input type="text" placeholder="Search..." class="form-control" />
+              <input type="submit" class="btn btn-secondary" value="Search">
+            </div>
+          </form>
+          </div>
+        </div>
+                <div class="row">
+          <div class="col">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th class="text-center"> No. </th>
+                  <th class="text-center"> Engager </th>
+                  <th class="text-center"> Date Issued </th>
+                  <th class="text-center"> Status </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                	<td> 1 </td>
+                  <td> BASCO, ALLEN </td>
+                  <td> October 05, 2017 </td>
+                  <td> Pending </td>
+                  <!-- <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editAllen" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+                <tr>
+                	<td> 2 </td>
+                  <td> MAURI, DIANE KAYE </td>
+                  <td> November 03, 2017 </td>
+                  <td> Pending </td>
+                  <!-- <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editDiane" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+                <tr>
+                	<td> 3 </td>
+                  <td> LANGIT, ISMAEL </td>
+                  <td> October 31, 2017 </td>
+                  <td> Pending </td>
+                 <!--  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editIsmael" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+                <tr>
+                	<td> 4 </td>
+                  <td> MIRANDA, JANINA-VALERIE </td>
+                  <td> October 29, 2017 </td>
+                  <td> Pending </td>
+                  <!-- <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editJanina" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+                <tr>
+
+                	<td> 5 </td>
+                  <td> GERALDEZ, MAUREEN </td>
+                  <td> October 26, 2017 </td>
+                  <td> Pending </td>
+                  <!-- <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editMaureen" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+                <tr>
+                	<td> 6 </td>
+                  <td> HALOS, NERI MAE </td>
+                  <td> October 26, 2017 </td>
+                  <td> Pending </td>
+                  <!-- <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editNeri" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+                <tr>
+                	<td> 7 </td>
+                  <td> MORILLO, REY MARK </td>
+                  <td> November 02, 2017 </td>
+                  <td> Pending </td>
+                  <!-- <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewAllen" class="btn btn-circle btn-outline-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#editYay" class="btn btn-circle btn-outline-warning"> <i class="fa fa-pencil"> </i> </button> </td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
             </div>
         </div>
      </div>
