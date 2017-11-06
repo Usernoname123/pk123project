@@ -142,6 +142,10 @@ i, span {
     background: #6d7fcc;
 }
 
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
 
 a[data-toggle="collapse"] {
     position: relative;
