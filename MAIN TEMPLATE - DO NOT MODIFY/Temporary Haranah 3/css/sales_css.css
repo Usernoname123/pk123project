@@ -1,1 +1,19 @@
 /* your styles go here */
+
+.btn-circle {
+	border-radius: 100%;
+	width: 38px;
+	height: 38px;
+}
+
+.row {
+	margin-top: 10px;
+}
+
+.table {
+	font-size: 0.95em;
+}
+
+.table .btn {
+	font-size: 12px;
+}
