@@ -6,6 +6,14 @@
 	height: 38px;
 }
 
+#remove.btn-circle {
+	border-radius: 100%;
+	font-size: 12px;
+	height: 30px;
+	width: 30px;
+	padding: 7px;
+}
+
 .row {
 	margin-top: 10px;
 }
@@ -64,6 +72,59 @@ thead {
 	letter-spacing: 2px;
 }
 
+.modal-title {
+	font-family: 'Patua One';
+	font-size: 25px;
+}
+
+.modal-body {
+	font-size: 0.75em;
+}
+
+.maps {
+	border: 1px solid #000;
+}
+
+.display-5 {
+	font-family: 'Nixie One';
+	font-size: 40px;
+}
+
+
+label {
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#btn-cal {
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: 'Poiret One';
+}
+
+.legend{
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.legend strong {
+	letter-spacing: 2px;
+}
+
+.append-link {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
 /** FONT IMPORTS **/
 @font-face {
 	font-family: 'Pacifico';
@@ -72,10 +133,10 @@ thead {
 
 @font-face {
 	font-family: 'Nixie One';
-	src: url('../fonts/NixieOne-Regular.woff2'); 
+	src: url('../fonts/NixieOne-Regular.woff2'); /**used in display-5**/
 }
 
 @font-face {
 	font-family: 'Poiret One';
-	src: url('../fonts/PoiretOne-Regular.woff2'); 
+	src: url('../fonts/PoiretOne-Regular.woff2'); /** used in h3 **/
 }
