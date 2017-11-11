@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="../css/sales_css.css" />
     <!-- Favicon-->
     <link rel="icon" href="../img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -111,20 +113,51 @@
               <div class="input-group">
                 <span class="input-group-addon"> <i class="fa fa-search"> </i> </span>
                 <input type="text" placeholder="Search..." class="form-control" />
-                <select class="input-group-addon">
-                  <option value=""> Event/Tour Type: All </option>
-                  <option value="Educational Trip"> Educational Trip </option>
-                  <option value="Conventions"> Conventions </option>
-                  <option value="Customized Local Tours"> Customized Local Tours </option>
-                  <option value="Customized International Tours"> Customized International Tours </option>
-                  <option value="Events"> Events </option>
-                  <option value="Incentive Groups"> Incentive Groups </option>
-                </select>
                 <span class="input-group-btn">
                   <input type="submit" class="btn btn-secondary btn-block" value="Search" />
                 </span>
               </div>
+                <div class="text-center">
+                  <p> 
+                    <a href="#filters" class="btn btn-outline-secondary btn-sm" id="btn-filter" data-toggle="collapse" aria-expanded="false" aria-controls="filters"> 
+                      Filters . . . </i>
+                    </a> 
+                  </p>
+                </div>
+                <div class="collapse" id="filters">
+                  <div class="card card-body">
+                    <select class="input-group-addon">
+                      <option value=""> Event/Tour Type: All </option>
+                      <option value="Educational Trip"> Educational Trip </option>
+                      <option value="Conventions"> Conventions </option>
+                      <option value="Customized Local Tours"> Customized Local Tours </option>
+                      <option value="Customized International Tours"> Customized International Tours </option>
+                      <option value="Events"> Events </option>
+                      <option value="Incentive Groups"> Incentive Groups </option>
+                    </select>
+                  </div>
+                </div>
             </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="results"> Showing 7 of 7 results </p>
+          </div>
+          <div class="col justify-content-end" id="pagination">
+            <p class="text-right">
+              <a href="#" class="number active"> 1 </a>
+              <a href="#" class="number"> 2 </a>
+              <a href="#" class="number"> 3 </a>
+              <a href="#" class="number"> 4 </a>
+              <a href="#" class="number"> 5 </a>
+              <a href="#" class="number"> 6 </a>
+              <a href="#" class="number"> 7 </a>
+              <a href="#" class="number"> 8 </a>
+              <a href="#" class="number"> 9 </a>
+              <a href="#" class="number"> 10 </a>
+              <a href="#" class="btn btn-primary btn-sm"> <i class="fa fa-caret-right"> </i> </a>
+            </p>
           </div>
         </div>
         <div class="row">
@@ -146,59 +179,80 @@
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
                 <tr>
                   <td> MAURI, DIANE KAYE </td>
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
                 <tr>
                   <td> LANGIT, ISMAEL </td>
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
                 <tr>
                   <td> MIRANDA, JANINA-VALERIE </td>
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
                 <tr>
                   <td> GERALDEZ, MAUREEN </td>
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn  btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
                 <tr>
                   <td> HALOS, NERI MAE </td>
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
                 <tr>
                   <td> MORILLO, REY MARK </td>
                   <td> Nov. 15, 2017 - Nov. 19, 2017 </td>
                   <td> Educational Trip </td>
                   <td class="text-center"> 100 </td>
-                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-icon btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
-                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-icon btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
+                  <td class="text-center"> <button type="button" data-toggle="modal" data-target="#viewInclusions" class="btn btn-primary"> <i class="fa fa-search-plus"> </i> </button> </td>
+                  <td class="text-center"> <a href="sales_proposal_edit.html" class="btn btn-warning"> <i class="fa fa-pencil"> </i> </button> </td>
                 </tr>
               </tbody>
             </table>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="results"> Showing 7 of 7 results </p>
+          </div>
+          <div class="col justify-content-end" id="pagination">
+            <p class="text-right">
+              <a href="#" class="number active"> 1 </a>
+              <a href="#" class="number"> 2 </a>
+              <a href="#" class="number"> 3 </a>
+              <a href="#" class="number"> 4 </a>
+              <a href="#" class="number"> 5 </a>
+              <a href="#" class="number"> 6 </a>
+              <a href="#" class="number"> 7 </a>
+              <a href="#" class="number"> 8 </a>
+              <a href="#" class="number"> 9 </a>
+              <a href="#" class="number"> 10 </a>
+              <a href="#" class="btn btn-primary btn-sm"> <i class="fa fa-caret-right"> </i> </a>
+            </p>
           </div>
         </div>
       </div>
