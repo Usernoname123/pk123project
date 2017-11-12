@@ -116,7 +116,7 @@ h3 {
 	font-size: 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-family: 'Poiret One';
+	font-family: 'Op';
 }
 
 .legend{
@@ -138,13 +138,15 @@ h3 {
 	font-family: 'Pacifico';
 	src: url('../fonts/Pacifico-Regular.woff2'); /**used in display-4**/
 }
-
 @font-face {
 	font-family: 'Nixie One';
 	src: url('../fonts/NixieOne-Regular.woff2'); /**used in display-5**/
 }
-
 @font-face {
 	font-family: 'Poiret One';
 	src: url('../fonts/PoiretOne-Regular.woff2'); /** used in h3 **/
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans.woff2'); /** used in h3 **/
 }
