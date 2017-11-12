@@ -21,15 +21,76 @@
 .marginLogin{
 	margin-top: 15vh;
 }
+.marginChangePassword{
+  margin: 100px;
+}
+.marginDown{
+  margin: 0 100px 100px 100px;
+}
+.marginUp{
+  margin-top: 60px;
+}
+.changePassword{
+  height: 20vh;
+}
+.whiteLayer{
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.34);
+}
 .style{
 	background-color: rgba(255, 255, 255, 0.5);
 	padding:40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.34);
 }
 .titleLogin{
-	font-size: 1.2em;
-	letter-spacing: 1.5px;
+	font-size: 1.4em;
+	letter-spacing: 1.3px;
+  color: #fff;
+}
+.headingChange{
+  font-size: 1.4em;
+  padding: 25px;
 }
 .space{
 	padding-right: 5px;
+}
+input,
+.input-group-addon{
+  background-color:transparent !important;
+  border: 1px solid #fff !important;
+}
+input{
+  color: #fff !important;
+}
+::-webkit-input-placeholder,
+span { /* Chrome */
+  color: white !important;
+}
+:-ms-input-placeholder,
+span { /* IE 10+ */
+  color: #fff !important;
+}
+::-moz-placeholder,
+span { /* Firefox 19+ */
+  color: #fff !important;
+  opacity: 1;
+}
+:-moz-placeholder,
+span { /* Firefox 4 - 18 */
+  color: #fff !important;
+  opacity: 1;
+}
+.btn-login{
+  background-color: #dedfe0 !important;
+  color: #2d2d2d;
+}
+
+.btn-login:hover{
+  background-color: #4ac4e2 !important;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
 }
