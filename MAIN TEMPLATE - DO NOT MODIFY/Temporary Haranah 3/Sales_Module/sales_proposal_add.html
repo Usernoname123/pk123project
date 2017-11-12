@@ -103,7 +103,7 @@
           <div class="col">
             <h1 class="display-5"> 
               <a href="index.html" class="btn btn-outline-secondary btn-circle" title="Go back to Proposal List"> <i class="fa fa-home"> </i> </a>
-              Edit Proposal: Basco, John Allen
+              Add New Proposal
             </h1>
           </div>
         </div>
@@ -118,25 +118,25 @@
                     </p>
                   </div>
                   <div class="col-md-4">
-                    <input type="text" value="Basco, John Allen" placeholder="Engager Name" class="form-control form-control-sm">
+                    <input type="text" placeholder="Engager Name" class="form-control form-control-sm">
                   </div>
                   <div class="col-md-2">
                     <label> # of Participants: </label>
                   </div>
-                  <div class="col-md-4">
-                    <input type="number" value="100" placeholder="# of Participants" class="form-control form-control-sm">
+                  <div class="col-md-2">
+                    <input type="number" placeholder="# of Participants" class="form-control form-control-sm">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-md-2">
                     <p class="text-right">
                       <label> Event/Tour Start Date: </label>
                     </p>
                   </div>
-                  <div class="col-md-3">
-                    <input type="Date" value="2017-11-15" class="form-control form-control-sm">
+                  <div class="col-md-2">
+                    <input type="Date" class="form-control form-control-sm">
                   </div>
                   <div class="col-md-2">
                     <p class="text-right">
@@ -144,7 +144,7 @@
                     </p>
                   </div>
                   <div class="col-md-2">
-                    <input type="Date" value="2017-11-19" class="form-control form-control-sm">
+                    <input type="Date" class="form-control form-control-sm">
                   </div>
                   <div class="col-md-2">
                     <button type="button" class="btn btn-outline-primary btn-sm btn-block" id="btn-cal" data-toggle="modal" data-target="#viewCalendar"> <i class="fa fa-calendar-o"> </i> View Calendar </button>
@@ -152,153 +152,47 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-md-10">
                   <hr>
                   <h3 class="text-center"> Inclusions </h3>
-                  <p class="text-center legend"> 
-                    <strong> Legend: </strong>
-                    <i class="fa fa-square" style="color: green; margin-left: 20px; margin-right: 5px;"> </i> Available
-                    <i class="fa fa-square" style="color: red; margin-left: 20px; margin-right: 5px;"> </i> Unavailable
-                    <i class="fa fa-square" style="color: gray; margin-left: 20px; margin-right: 5px;"> </i> Pending
-                  </p>
                 </div>
               </div>
               <div class="form-group">
                 <div class="row">
-                  <div class="col-md-4">
-                    <input type="text" value="Roadtrip Economy airfair" class="form-control is-valid form-control-sm" placeholder="Inclusion name" />
+                  <div class="col-md-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Inclusion name" />
                   </div>
                   <div class="col-md-3"> 
-                    <select class="form-control form-control-sm is-valid">
+                    <select class="form-control form-control-sm">
                       <option> - - Inclusion Type - - </option>
                       <option> Hotel </option>
-                      <option> Restaurant </option>
-                      <option selected> Transportation </option>
-                      <option> Nurse </option>
-                      <option> Photographer </option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <input type="text" value="Korean Airlines" placeholder="Supplier" class="form-control form-control-sm is-valid">
-                  </div>
-                  <div class="col-md-1">
-                    <p>
-                      <button class="btn btn-outline-danger btn-circle" id="remove" title="Remove Inclusion"> <i class="fa fa-times"> </i> </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input type="text" value="4 nights Accomodation" class="form-control is-valid form-control-sm" placeholder="Inclusion name" />
-                  </div>
-                  <div class="col-md-3"> 
-                    <select class="form-control form-control-sm is-valid">
-                      <option> - - Inclusion Type - - </option>
-                      <option selected> Hotel </option>
                       <option> Restaurant </option>
                       <option> Transportation </option>
                       <option> Nurse </option>
                       <option> Photographer </option>
                     </select>
                   </div>
-                  <div class="col-md-4">
-                    <input type="text" value="Annyeong Haseyo" placeholder="Supplier" class="form-control form-control-sm is-valid">
+                  <div class="col-md-3">
+                    <input type="text" placeholder="Supplier" class="form-control form-control-sm">
                   </div>
                   <div class="col-md-1">
-                    <p>
-                      <button class="btn btn-outline-danger btn-circle" id="remove" title="Remove Inclusion"> <i class="fa fa-times"> </i> </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input type="text" value="Breakfast 1: 2 pc Chicken" class="form-control is-invalid form-control-sm" placeholder="Inclusion name" />
-                  </div>
-                  <div class="col-md-3"> 
-                    <select class="form-control form-control-sm is-invalid">
-                      <option> - - Inclusion Type - - </option>
-                      <option> Hotel </option>
-                      <option selected> Restaurant </option>
-                      <option> Transportation </option>
-                      <option> Nurse </option>
-                      <option> Photographer </option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <input type="text" value="Jollibee" placeholder="Supplier" class="form-control form-control-sm is-invalid">
-                  </div>
-                  <div class="col-md-1">
-                    <p>
-                      <button class="btn btn-outline-danger btn-circle" id="remove" title="Remove Inclusion"> <i class="fa fa-times"> </i> </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input type="text" value="Lunch 1: All-you-can-eat" class="form-control form-control-sm" placeholder="Inclusion name" />
-                  </div>
-                  <div class="col-md-3"> 
-                    <select class="form-control form-control-sm">
-                      <option> - - Inclusion Type - - </option>
-                      <option> Hotel </option>
-                      <option selected> Restaurant </option>
-                      <option> Transportation </option>
-                      <option> Nurse </option>
-                      <option> Photographer </option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <input type="text" value="Bahay Ni Kristine" placeholder="Supplier" class="form-control form-control-sm">
-                  </div>
-                  <div class="col-md-1">
-                    <p>
-                      <button class="btn btn-outline-danger btn-circle" id="remove" title="Remove Inclusion"> <i class="fa fa-times"> </i> </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input type="text" value="Dinner 1: All-you-can-eat" class="form-control form-control-sm" placeholder="Inclusion name" />
-                  </div>
-                  <div class="col-md-3"> 
-                    <select class="form-control form-control-sm">
-                      <option> - - Inclusion Type - - </option>
-                      <option> Hotel </option>
-                      <option selected> Restaurant </option>
-                      <option> Transportation </option>
-                      <option> Nurse </option>
-                      <option> Photographer </option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <input type="text" value="Azalea Residences" placeholder="Supplier" class="form-control form-control-sm">
-                  </div>
-                  <div class="col-md-1">
-                    <p>
+                    <p class="text-right">
                       <button class="btn btn-outline-danger btn-circle" id="remove" title="Remove Inclusion"> <i class="fa fa-times"> </i> </button>
                     </p>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-md-10">
                   <a href="#" class="append-link"> ADD ANOTHER INCLUSION . . . </a>
                   <hr>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-md-10">
                   <p class="text-right">
                     <a href="index.html" class="btn btn-outline-secondary btn-sm"> Cancel </a>
-                    <input type="submit" value="Save Changes" class="btn btn-primary btn-sm" />
+                    <input type="submit" value="Create" class="btn btn-primary btn-sm" />
                   </p>
                 </div>
               </div>
@@ -367,7 +261,7 @@
                         <td> 10 </td>
                         <td> 11 </td>
                       </tr>
-                     <tr>
+                      <tr>
                         <td> 12 <br>
                                 <span class="fa fa-circle" style="color: pink;"> </span>
                         </td>
@@ -411,7 +305,7 @@
                       <tr>
                         <td> 26 </td>
                         <td> 27 </td>
-                        <td> 28</td>
+                        <td> 28 </td>
                         <td> 29 </td>
                         <td> 30 </td>
                         <td>  </td>
@@ -420,6 +314,10 @@
                     </tbody>
                   </table>
                 </div>
+                <p> NOTE: <br>
+                    Dates without color are the available dates <br>
+                    The number of colors are the number of events/tours in that day <br>
+                    Hover to see event/tour details </p>
               </div>
             <div class="clearfix"> </div>
           </div>
