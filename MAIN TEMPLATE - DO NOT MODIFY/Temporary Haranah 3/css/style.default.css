@@ -26,6 +26,9 @@ span.position{
 *     GENERAL
 * ==========================================================
 */
+.logoNav{
+  height: 30px;
+}
 .profilePicture{
   height: 25px;
 }
@@ -230,6 +233,7 @@ nav.navbar a.menu-btn {
 nav.navbar a.menu-btn i[class*='icon-'] {
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
+
 }
 
 /*  NAVBAR MEDIAQUERIES ---------------------------------- */
@@ -492,13 +496,14 @@ footer.main-footer {
   position: absolute;
   width: 100%;
   bottom: 0;
-  background: #222;
-  padding: 10px 0;
+  background: #F7F9F9;
+  padding: 3px 10px 10px 10px;
+  box-shadow: 0 4px 20px 8px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.19);
 }
 
 footer.main-footer p {
   font-size: 0.7em;
-  color: #777;
+  color: #2d2d2d;
   margin: 0;
 }
 

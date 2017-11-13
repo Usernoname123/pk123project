@@ -12,7 +12,8 @@ nav.navbar a.menu-btn:hover {
   color: #EB984E;
 }
 nav.side-navbar a:focus, nav.side-navbar a:hover {
-  color: #EB984E;
+  background: #EB984E;
+  color: #fff;
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: #EB984E;
