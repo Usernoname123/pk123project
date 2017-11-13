@@ -67,11 +67,6 @@ table#modal th{
 	text-transform: uppercase;
 }
 
-.display-4 {
-	font-family: 'Pacifico';
-
-}
-
 thead {
 	text-transform: uppercase;
 	font-size: 12px;
@@ -90,12 +85,6 @@ thead {
 .maps {
 	border: 1px solid #000;
 }
-
-.display-5 {
-	font-family: 'Nixie One';
-	font-size: 2em;
-}
-
 
 label {
 	font-size: 12px;
@@ -130,22 +119,4 @@ h3 {
 .append-link {
 	text-transform: uppercase;
 	font-size: 12px;
-}
-
-/** FONT IMPORTS **/
-@font-face {
-	font-family: 'Pacifico';
-	src: url('../fonts/Pacifico-Regular.woff2'); /**used in display-4**/
-}
-@font-face {
-	font-family: 'Nixie One';
-	src: url('../fonts/NixieOne-Regular.woff2'); /**used in display-5**/
-}
-@font-face {
-	font-family: 'Poiret One';
-	src: url('../fonts/PoiretOne-Regular.woff2'); /** used in h3 **/
-}
-@font-face {
-	font-family: 'Open Sans';
-	src: url('../fonts/OpenSans.woff2'); /** used in h3 **/
 }

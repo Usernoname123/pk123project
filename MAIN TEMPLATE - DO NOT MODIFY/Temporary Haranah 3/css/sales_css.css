@@ -1,4 +1,26 @@
 /* your styles go here */
 nav.side-navbar li.active a {
-  background: #FBB117;
+  background: #EB984E;
+}
+nav.side-navbar li a:hover{
+  background: #EB984E;
+}
+nav.side-navbar li ul.collapse a {
+  border-left: 2px solid #33b35a;
+}
+nav.navbar a.menu-btn:hover {
+  background: #EB984E;
+}
+nav.side-navbar a:focus, nav.side-navbar a:hover, nav.side-navbar a[aria-expanded="true"] {
+  background: #EB984E;
+  color: #fff;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #EB984E;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
+  background-color: #EB984E;
+}
+a:focus, a:hover {
+  color: #EB984E;
 }
