@@ -34,11 +34,11 @@
   </head>
   <body>
     <!-- Side Navbar -->
-    <nav class="side-navbar">
+    <nav class="side-navbar bg-sidebar">
       <div class="side-navbar-wrapper">
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <div class="sidenav-header-inner text-center"><img src="../img/ismael.png" alt="person" class="img-fluid rounded-circle">
-            <h2 class="h5 text-uppercase">Ismael Langit</h2><span class="text-uppercase">Sales Personnel</span>
+            <h2 class="h5 text-uppercase">Ismael Langit</h2><span class="text-uppercase position">Sales Personnel</span>
           </div>
           <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <img src="../img/icon.png"></a></div>
         </div>
@@ -91,7 +91,14 @@
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <li class="nav-item">
-                  <a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i> </a>
+                  <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="profilePicture" src="../img/ismael.png">
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#"><span class="fa fa-user-circle-o"></span> View Profile</a>
+                    <a class="dropdown-item" href="#"><span class="fa fa-pencil-square-o"></span> Edit Profile</a>
+                    <a class="dropdown-item" href="#"><span class="fa fa-sign-out"></span> Logout</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -103,7 +110,7 @@
           <div class="col">
             <h1 class="display-4"> 
               Proposals 
-              <a href="sales_proposal_add.html" class="btn btn-outline-primary btn-circle" title="Create New Proposal"> <i class="fa fa-pencil-square-o"> </i> </a>
+              <a href="sales_proposal_add.html" class="btn btn-outline-warning btn-circle" title="Create New Proposal"> <i class="fa fa-pencil-square-o"> </i> </a>
             </h1>
           </div>
         </div>

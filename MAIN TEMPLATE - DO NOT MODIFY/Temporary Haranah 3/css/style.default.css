@@ -18,11 +18,17 @@
   letter-spacing: 1px;
   font-weight: 500px;
 }
+span.position{
+  color: #F8F9F9 !important;
+}
 /*
 * ==========================================================
 *     GENERAL
 * ==========================================================
 */
+.profilePicture{
+  height: 25px;
+}
 .pagePadding{
   padding: 20px;
 }
@@ -107,11 +113,13 @@ i[class*='icon-'] {
 * ==========================================================
 */
 nav.navbar {
-  background: #393836;
+  background: #F7F9F9  ;
   padding: .4rem 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 20px 0 rgba(0, 0, 0, 0.3);
+}
   /* Navbar Brand --------- */
   /*  Dropdowns ------------ */
-  /* Toggle Button ---------- */
+  /* Toggle Button ---------- */v
 }
 
 nav.navbar .side-navbar-wrapper {
@@ -129,7 +137,7 @@ nav.navbar .navbar-holder {
 
 nav.navbar a {
   font-size: 0.8em;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 
@@ -214,8 +222,7 @@ nav.navbar a.menu-btn {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: #292929;
-  color: #fff;
+  color: #000;
   text-align: center;
   padding: 0 !important;
 }
@@ -261,7 +268,6 @@ nav.side-navbar {
   height: 100%;
   width: 200px;
   text-align: left;
-  background: #393836;
   color: #fff;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -307,7 +313,6 @@ nav.side-navbar li ul.collapse a:hover {
 }
 
 nav.side-navbar .sidenav-header {
-  background: #292929;
   padding: 30px;
   margin-bottom: 10px;
 }
