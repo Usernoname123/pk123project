@@ -1,0 +1,42 @@
+/* your styles go here */
+nav.side-navbar li.active a {
+  background: #009ad6;
+}
+nav.side-navbar li a:hover{
+  background: #009ad6;
+}
+nav.side-navbar li ul.collapse a {
+  border-left: 3px solid #009ad6;
+}
+nav.navbar a.menu-btn:hover {
+	color: #009ad6;
+}
+nav.side-navbar a:focus, nav.side-navbar a:hover {
+  background: #009ad6;
+  color: #fff;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #009ad6;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
+  background-color: #009ad6;
+}
+a:focus, a:hover {
+  color: #009ad6;
+}
+.bg-sidebar {
+  width: 100%;
+  height: 100%;
+  background: url("../img/haranah.jpg") center center no-repeat;
+  background-size: cover;
+}
+.bg-sidebar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #17202A, #42c2f4);
+  opacity: .6;
+}
