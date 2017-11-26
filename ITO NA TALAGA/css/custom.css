@@ -1,9 +1,10 @@
+body {
+	font-size: 0.85em;
+}
+
 
 .btn-circle {
 	border-radius: 100%;
-	width: 38px;
-	height: 38px;
-	padding: 8px 10px;
 }
 
 #remove.btn-circle {
@@ -22,12 +23,6 @@
 	font-size: 0.95em;
 }
 
-.table .btn {
-	font-size: 12px;
-	border-radius: 100%;
-	width: 35px;
-	height: 35px;
-}
 
 #btn-filter {
 	margin-top: 10px;
@@ -114,4 +109,25 @@ h3 {
 .append-link {
 	text-transform: uppercase;
 	font-size: 12px;
+}
+
+.gray-status {
+	padding: 5px 20px;
+	color: #fff;
+	background-color: #b7b7b7;
+	border-radius: 5px;
+}
+
+.green-status {
+	padding: 5px 20px;
+	color: #fff;
+	background-color: #b7b7b7;
+	border-radius: 5px;
+}
+
+.red-status {
+	padding: 5px 20px;
+	color: #fff;
+	background-color: #b7b7b7;
+	border-radius: 5px;
 }

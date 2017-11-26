@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2017 at 02:28 AM
+-- Generation Time: Nov 26, 2017 at 01:39 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -47,10 +47,18 @@ CREATE TABLE `user` (
   `department` enum('sales','tours','transportation','accounting','management') NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(18) NOT NULL,
-  `contact_no` varchar(11) NOT NULL,
-  `status` enum('banned','active','offline') NOT NULL,
+  `contact_no` varchar(12) NOT NULL,
+  `status` enum('banned','active','offline') DEFAULT NULL,
   `image` mediumblob
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `last_name`, `first_name`, `department`, `email`, `password`, `contact_no`, `status`, `image`) VALUES
+(2, 'Viloria', 'Kristine', 'management', 'viloriakristine@gmail.com', 'MaViKr417', '09951032417', 'offline', NULL),
+(3, 'langit', 'ismael', 'sales', 'ismaellangit@gmail.com', 'Salais417', '09951032417', 'offline', NULL);
 
 --
 -- Indexes for dumped tables
@@ -68,6 +76,15 @@ ALTER TABLE `engager`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
