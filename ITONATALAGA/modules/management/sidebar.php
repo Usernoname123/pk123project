@@ -14,25 +14,25 @@
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">
             <li <?php if($filename=='index.php') { echo "class='active'"; } ?> >
-              <a href="index.html"> <i class="fa fa-inbox"></i><span>Contracts</span></a>
+              <a href="index.php"> <i class="fa fa-inbox"></i><span>Contracts</span></a>
             </li>                
             <li <?php if($filename=='proposal.php') { echo "class='active'"; } ?>>
               <a href="proposal.php"> <i class="fa fa-thumb-tack"></i><span>Proposals</span></a>
             </li>                 
             <li <?php if($filename=='request.php') { echo "class='active'"; } ?>>
-              <a href="request.php"> <i class="fa fa-thumb-tack"></i><span>Budget Request</span></a>
+              <a href="request.php"> <i class="fa fa-money"></i><span>Budget Request</span></a>
             </li>
             <li <?php if($filename=='payment.php') { echo "class='active'"; } ?>>
-              <a href="payment.php"> <i class="fa fa-file-text"></i><span>Engager Payment</span></a>
+              <a href="payment.php"> <i class="fa fa-credit-card"></i><span>Engager Payment</span></a>
             </li>
             <li <?php if($filename=='history.php') { echo "class='active'"; } ?>>
-              <a href="history.php"> <i class="fa fa-file-text"></i><span>History</span></a>
+              <a href="history.php"> <i class="fa fa-history"></i><span>History</span></a>
             </li>
             <li <?php if($filename=='employee.php') { echo "class='active'"; } ?>>
-              <a href="employee.php"> <i class="fa fa-file-text"></i><span>Employees</span></a>
+              <a href="employee.php"> <i class="fa fa-user"></i><span>Employees</span></a>
             </li>
             <li <?php if($filename=='activity.php') { echo "class='active'"; } ?>>
-              <a href="activity.php"> <i class="fa fa-file-text"></i><span>Activity Log</span></a>
+              <a href="activity.php"> <i class="fa fa-address-book-o"></i><span>Activity Log</span></a>
             </li>
           </ul>
         </div>

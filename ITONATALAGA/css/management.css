@@ -27,6 +27,16 @@ a {
   color: #066830;
 }
 
+.btn-primary {
+  background: #066830;
+  border-color: #066830;
+}
+
+.btn-outline-primary {
+  border-color: #066830;
+  color: #066830;
+}
+
 
 .bg-sidebar {
   width: 100%;
