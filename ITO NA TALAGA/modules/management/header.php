@@ -13,7 +13,7 @@
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <li class="nav-item">
                   <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="profilePicture" src="../img/ismael.png">
+                    <img class="profilePicture" src="../../img/ismael.png">
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#"><span class="fa fa-user-circle-o"></span> View Profile</a>

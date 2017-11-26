@@ -1,6 +1,8 @@
 
 <body>
     <!-- Side Navbar -->
+    <?php $filename=basename($_SERVER['PHP_SELF']); ?>
+
     <nav class="side-navbar bg-sidebar">
       <div class="side-navbar-wrapper">
         <div class="sidenav-header d-flex align-items-center justify-content-center">
@@ -11,25 +13,25 @@
         </div>
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">
-            <li>
+            <li <?php if($filename=='index.php') { echo "class='active'"; } ?> >
               <a href="index.html"> <i class="fa fa-inbox"></i><span>Contracts</span></a>
             </li>                
-            <li>
+            <li <?php if($filename=='proposal.php') { echo "class='active'"; } ?>>
               <a href="proposal.php"> <i class="fa fa-thumb-tack"></i><span>Proposals</span></a>
             </li>                 
-            <li>
+            <li <?php if($filename=='request.php') { echo "class='active'"; } ?>>
               <a href="request.php"> <i class="fa fa-thumb-tack"></i><span>Budget Request</span></a>
             </li>
-            <li>
+            <li <?php if($filename=='payment.php') { echo "class='active'"; } ?>>
               <a href="payment.php"> <i class="fa fa-file-text"></i><span>Engager Payment</span></a>
             </li>
-            <li>
+            <li <?php if($filename=='history.php') { echo "class='active'"; } ?>>
               <a href="history.php"> <i class="fa fa-file-text"></i><span>History</span></a>
             </li>
-            <li>
+            <li <?php if($filename=='employee.php') { echo "class='active'"; } ?>>
               <a href="employee.php"> <i class="fa fa-file-text"></i><span>Employees</span></a>
             </li>
-            <li>
+            <li <?php if($filename=='activity.php') { echo "class='active'"; } ?>>
               <a href="activity.php"> <i class="fa fa-file-text"></i><span>Activity Log</span></a>
             </li>
           </ul>

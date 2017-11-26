@@ -1,4 +1,5 @@
 <?php
+  include '../../db.php';
 	include 'head.php';
 	include 'sidebar.php';
 	include 'header.php';
@@ -7,7 +8,8 @@
         <div class="row">
           <div class="col-md-6">
             <h1 class="display-4"> 
-              Employee List <button class="btn btn-outline-primary btn-circle"> <i class="fa fa-plus"> </i> </button>
+              Employee List 
+              <button class="btn btn-outline-primary btn-circle" data-toggle="modal" data-target="#addEmployee"> <i class="fa fa-plus"> </i> </button>
             </h1>
           </div>
           <div class="col-md-6">
@@ -19,6 +21,11 @@
             </form>
           </div>
         </div>
+        <?php
+          $query = "SELECT eng_id FROM engager";
+          $result = $haranahtours->query($query);
+          if($result->num_rows > 0) { 
+        ?>
         <div class="row">
           <div class="col">
             <div class="card card-body">
@@ -67,135 +74,91 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <p class="results"> Showing 7 of 7 results </p>
-          </div>
-          <div class="col justify-content-end" id="pagination">
-            <p class="text-right">
-              <a href="#" class="number active"> 1 </a>
-              <a href="#" class="number"> 2 </a>
-              <a href="#" class="number"> 3 </a>
-              <a href="#" class="number"> 4 </a>
-              <a href="#" class="number"> 5 </a>
-              <a href="#" class="number"> 6 </a>
-              <a href="#" class="number"> 7 </a>
-              <a href="#" class="number"> 8 </a>
-              <a href="#" class="number"> 9 </a>
-              <a href="#" class="number"> 10 </a>
-              <a href="#" class="btn btn-primary btn-sm"> <i class="fa fa-caret-right"> </i> </a>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <table class="table table-bordered table-hover">
-              <!-- make table responsive -->
-              <thead class="thead-dark">
-                <tr>
-                  <th class="text-center"> Engager </th>
-                  <th class="text-center"> Tour/Event Durations </th>
-                  <th class="text-center"> Status </th>
-                  <th class="text-center"> Details </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> Not Yet All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> Not Yet All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> Not Yet All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> Not Yet All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> Not Yet All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-                <tr>
-                  <td> SLU </td>
-                  <td> 11/15/2017 11:00PM - 11/19/2017 8:00AM </td>
-                  <td> Not Yet All Checked </td>
-                  <td class="text-center"> <a href="tours_availability.html" class="btn btn-info"> <i class="fa fa-search-plus"> </i> </a> </td>
-                </tr>
-              </tbody>
-            </table>
-            <hr>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p class="results"> Showing 7 of 7 results </p>
-          </div>
-          <div class="col justify-content-end" id="pagination">
-            <p class="text-right">
-              <a href="#" class="number active"> 1 </a>
-              <a href="#" class="number"> 2 </a>
-              <a href="#" class="number"> 3 </a>
-              <a href="#" class="number"> 4 </a>
-              <a href="#" class="number"> 5 </a>
-              <a href="#" class="number"> 6 </a>
-              <a href="#" class="number"> 7 </a>
-              <a href="#" class="number"> 8 </a>
-              <a href="#" class="number"> 9 </a>
-              <a href="#" class="number"> 10 </a>
-              <a href="#" class="btn btn-primary btn-sm"> <i class="fa fa-caret-right"> </i> </a>
-            </p>
-          </div>
-        </div>
+
+        <?php } else { ?>
+          <h2 class="text-center"> THERE ARE NO EMPLOYEES YET. </h2>
+        <?php
+          } 
+          ?>
       </div>
+
+
+<!-- ADD NEW EMPLOYEE MODAL -->
+<div class="modal fade" id="addEmployee" tabindex="-1" role="dialog" aria-labelledby="addEmployee" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addEmployee">Add New Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+          <div class="form-group row">
+            <div class="col-md-4 text-right">
+              <label> Employee Name: </label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control form-control-sm" placeholder="Last Name" name="lastname">
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control form-control-sm" placeholder="First Name" name="lastname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label> Employee Email Address: </label>
+            </div>
+            <div class="col-md-8">
+              <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span> 
+                <input type="email" class="form-control form-control-sm text-right" placeholder="@haranahtours.com.ph" name="email">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label> Employee Contact No.: </label>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-phone"> </i> </span>
+                <input type="text" class="form-control form-control-sm" placeholder="Telephone" name="phone">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-mobile"> </i> </span>
+                <input type="text" class="form-control form-control-sm" placeholder="Mobile" name="mobile">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label> Select Employee Department: </label>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-addon"> <i class="fa fa-briefcase"> </i> </span>
+                <select class="form-control form-control-sm text-center">
+                  <option selected disabled value="default"> - - - - </option>
+                  <option value="Sales"> Sales </option>
+                  <option value="Reservation for Tours"> Reservation for Tours </option>
+                  <option value="Reservation for Transportation"> Reservation for Transportation </option>
+                  <option value="Accounting"> Accounting </option>
+                  <option value="Management"> Management </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-sm">Add New Employee</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php include 'footer.php'; ?>
