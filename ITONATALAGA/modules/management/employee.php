@@ -29,7 +29,11 @@
       <form>
         <div class="input-group">
           <input type="text" class="form-control form-control-sm" placeholder="Search..." />
-          <span class="input-group-addon"> <i class="fa fa-search"> </i> </span>
+          <span class="input-group-btn">
+            <button class="btn btn-primary btn-sm">
+              <i class="fa fa-search"> </i>
+            </button>
+          </span>
         </div>
       </form>
     </div>
@@ -53,12 +57,12 @@
         $insert = mysqli_query($connect,"INSERT INTO user (last_name, first_name, department, email, password, contact_no, status) VALUES ('$lastname','$firstname','$department','$email','$password','$mobile','$status')"); 
       ?>
         <div class="alert alert-success" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <strong><span class = "fa fa-check-circle"></span> Success!</strong> You have successfully added a new user.
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> <i class="fa fa-times fa-sm"> </i></button>
+            <strong><span class = "fa fa-check-circle"></span> Success!</strong> You have successfully added a new user. The default password for this user is: <strong> <?php echo $password; ?> </strong>
         </div>
       <?php } else { ?>
         <div class="alert alert-warning alert-dismissable">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times close"> </i></button>
           <span class="fa fa-exclamation-circle space"></span>
           <strong>Warning!</strong> The user you are adding <strong> already exists in the database. </strong>
         </div>
@@ -83,12 +87,12 @@
             </div>
             <div class="col-md-2">
               <select class="form-control form-control-sm">
-                <option> All </option>
-                <option> Sales </option>
-                <option> Tours </option>
-                <option> Transportation </option>
-                <option> Accounting </option>
-                <option> Management </option>
+                <option value="default"> All </option>
+                <option value="sales"> Sales </option>
+                <option value="tours"> Tours </option>
+                <option value="transportation"> Transportation </option>
+                <option value="accounting"> Accounting </option>
+                <option value="management"> Management </option>
               </select>
             </div>
             <div class="col-md-2 text-right">
@@ -96,10 +100,10 @@
             </div>
             <div class="col-md-2">
               <select class="form-control form-control-sm">
-                <option> All </option>
-                <option> Active </option>
-                <option> Offline </option>
-                <option> Disabled </option>
+                <option value="default"> All </option>
+                <option value="active"> Active </option>
+                <option value="offline"> Offline </option>
+                <option value="disabled"> Disabled </option>
               </select>
             </div>
             <div class="col-md-2 text-right">
@@ -107,7 +111,7 @@
             </div>
             <div class="col-md-1">
               <select class="form-control form-control-sm" name="numres">
-                <option selected value="15"> 15 </option>
+                <option value="15"> 15 </option>
                 <option value="30"> 30 </option>
                 <option value="50"> 50 </option>
                 <option value="100"> 100 </option>
@@ -136,7 +140,10 @@
       $endres = $totalrows;
     }
 
-    $totalpage = round($totalrows/$numres) + 1;
+    $totalpage = round($totalrows/$numres);
+    if($totalpage==0) {
+      $totalpage = 1;
+    }
 
   ?>
   <div class="row">
@@ -182,20 +189,8 @@
               </div>
               Department
             </th>
-            <th class="align-middle"> 
-              <div class="btn-group-vertical">
-                  <input title="Sort by Ascending" class="btn arrowSort" type="submit" value="▲">
-                  <input title="Sort by Descending" class="btn arrowSort" type="submit" value="▼">
-              </div>
-              Email
-            </th>
-            <th class="align-middle"> 
-              <div class="btn-group-vertical">
-                  <input title="Sort by Ascending" class="btn arrowSort" type="submit" value="▲">
-                  <input title="Sort by Descending" class="btn arrowSort" type="submit" value="▼">
-              </div>
-              Contact Number
-            </th>
+            <th class="align-middle"> Email </th>
+            <th class="align-middle"> Contact Number </th>
             <th class="align-middle">
               <div class="btn-group-vertical">
                   <input title="Sort by Ascending" class="btn arrowSort" type="submit" value="▲">
@@ -219,7 +214,10 @@
           ?>
           <tr>
             <td class="text-center align-middle"> <?php echo $counter; ?> </td>
-            <td class="align-middle"> <?php echo $name; ?> </td>
+            <td class="align-middle">
+              <img class="profilePicture" src="../../img/kristine.png" style="margin: 0 1em;" />  <!-- HOW TO ADD USER PICTURE???? -->
+              <?php echo $name; ?> 
+            </td>
             <td class="align-middle"> <?php echo $department; ?> </td>
             <td class="align-middle"> <?php echo $email; ?> </td>
             <td class="align-middle"> <?php echo $contact_no; ?> </td>
@@ -231,11 +229,56 @@
               <?php } ?>
             </td>
             <td class="text-center align-middle">
-              <a href="employee_details.php?user=<?php echo $row['user_id']; ?>" class="btn btn-circle btn-primary btn-sm">
+              <button class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#userprofile_<?php echo $row['user_id']; ?>"> 
                 <i class="fa fa-search"> </i> 
-              </a>
+              </button>
             </td>
           </tr>
+
+<!-- USER PROFILE MODAL -->
+
+<div class="modal fade" id="userprofile_<?php echo $row['user_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="userprofile_<?php echo $row['user_id']; ?>" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userprofile_<?php echo $row['user_id']; ?>"> Employee Profile </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+        <div class="modal-body">
+          <fieldset>
+            <legend> Employee Details </legend>
+            <div class="row">
+              <div class="col-4 text-center">
+                <img class="img-fluid img-thumbnail" src="../../img/kristine.png"/>
+                <a href="employee_disable.php" class="btn btn-danger btn-xs"> Disable Account </a> 
+              </div>
+              <div class="col-8">
+                <label class="col-form-label col-form-label-sm"> Name: </label> <strong><?php echo $name; ?></strong> <br>
+                <label class="col-form-label col-form-label-sm"> Email: </label> <strong><?php echo $email; ?></strong> <br>
+                <label class="col-form-label col-form-label-sm"> Contact No: </label> <strong><?php echo $contact_no; ?></strong> <br> 
+                <label class="col-form-label col-form-label-sm"> Department: </label> <strong><?php echo $department; ?></strong> <br>
+                <label class="col-form-label col-form-label-sm"> Status: </label> <strong><?php echo $status; ?></strong> <br>
+                <label class="col-form-label col-form-label-sm"> Last Online: </label> <strong><?php echo $status; ?></strong> <!-- idadagdag sa database -->   
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend> Latest Activity </legend>
+          </fieldset>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Cancel</button>
+          <input type="submit" value="Add New Employee" name="add" class="btn btn-primary btn-sm" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- END OF USER PROFILE MODAL -->
           <?php } ?>
         </tbody>
       </table>
@@ -249,7 +292,7 @@
 
 <!-- ADD NEW EMPLOYEE MODAL -->
 <div class="modal fade" id="addEmployee" tabindex="-1" role="dialog" aria-labelledby="addEmployee" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="addEmployee">Add New Employee</h5>
@@ -259,22 +302,26 @@
       </div>
       <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
       <div class="modal-body">
-          <div class="form-group row">
-            <div class="col-md-4 text-right">
-              <label> Employee Name: </label>
+          <div class="row">
+            <div class="col">
+              <label class="col-form-label col-form-label-sm"> Employee Name: </label>
             </div>
-            <div class="col-md-4">
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6">
               <input type="text" class="form-control form-control-sm" placeholder="Last Name" name="lastname">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <input type="text" class="form-control form-control-sm" placeholder="First Name" name="firstname">
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4 text-right">
-              <label> Employee Email Address: </label>
+            <div class="col">
+                <label class="col-form-label col-form-label-sm"> Employee Email Address: </label>
             </div>
-            <div class="col-md-8">
+          </div>
+          <div class="row">
+            <div class="col">
               <div class="input-group">
                 <span class="input-group-addon"> <i class="fa fa-envelope"> </i> </span> 
                 <input type="email" class="form-control form-control-sm text-right" placeholder="@haranahtours.com.ph" name="email">
@@ -282,24 +329,25 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4 text-right">
-              <label> Employee Contact No.: </label>
-            </div>            
-            <div class="col-md-4">
+            <div class="col-md-6">
+              <label class="col-form-label col-form-label-sm"> Employee Contact No. </label>
+            </div>
+            <div class="col-md-6">
+              <label class="col-form-label col-form-label-sm"> Select Employee Department </label>
+            </div>
+          </div>
+          <div class="row">           
+            <div class="col-md-6">
               <div class="input-group">
                 <span class="input-group-addon"> <i class="fa fa-mobile"> </i> </span>
                 <input type="text" class="form-control form-control-sm" placeholder="Mobile" name="mobile">
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-right">
-              <label> Select Employee Department: </label>
-            </div>
             <div class="col-md-6">
               <div class="input-group">
                 <span class="input-group-addon"> <i class="fa fa-briefcase"> </i> </span>
                 <select class="form-control form-control-sm text-center" name="department">
+                  <option value="default"> Choose . . . </option>
                   <option value="sales"> Sales </option>
                   <option value="tours"> Reservation for Tours </option>
                   <option value="transportation"> Reservation for Transportation </option>
@@ -318,5 +366,6 @@
     </div>
   </div>
 </div>
+
 
 <?php include 'footer.php'; ?>
